@@ -8,7 +8,7 @@ function setup() {
  
 
 //number of particles
-  for ( let i = 0; i < 300; i++) {
+  for ( let i = 0; i < 800; i++) {
     //particle size is 4
     particles.push(new Particle(4));
   }
@@ -46,7 +46,7 @@ function attract(particle) {
          
          particle.mouse.set(mouseX, mouseY);
          particle.mouse.sub(particle.location);
-         particle.mouse.setMag(0.08);
+         particle.mouse.setMag(0.3);
          //acceleration = mouse;
          particle.location.add(particle.mouse); 
       
@@ -102,7 +102,7 @@ function windowResized(){
 display() {
 
     //fill changes as location changes
-    fill(230-(this.location.x *0.4), 100+(this.location.x *0.2), 250-(this.location.y *0.04));
+    fill(230-(this.location.x *0.4), 100+(this.location.x *0.15), 250-(this.location.y *0.09));
     ellipse(this.location.x, this.location.y, this.r*2, this.r*2);
 
 }
